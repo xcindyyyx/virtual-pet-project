@@ -22,7 +22,11 @@ class Pet:
         self.clamp_stats()   # makes sure stats stay between 0-100
 
     def bathe(self):
-        pass
+        self.hunger -= 5     # 5 points down for bathing
+        self.energy -= 30    # 30 points down for bathing
+        self.happiness += 40 # 40 points up for bathing
+        self.cleaniness +=35 # 35 point up for bathing
+        self.clamp_stats()   # makes sure stats stay between 0-100
 
     # Keep values in a range of 0-100
     def clamp_stats(self):
