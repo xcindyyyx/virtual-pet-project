@@ -14,6 +14,12 @@ class Pet:
         self.cleaniness -=5  # 5 point down (Pet can get dirty from eating)
         self._clamp_stats()  # makes sure stats stay between 0-100
 
+    def play(self):
+        pass
+
+    def bathe(self):
+        pass
+    
     # Keep values in a range of 0-100
     def clamp_stats(self):
         # we want it in a safe range so use max and min
