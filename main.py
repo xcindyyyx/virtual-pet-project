@@ -12,10 +12,14 @@ class Pet:
         self.energy -= 10    # 10 points down for eating
         self.happiness += 10 # 10 points up for eating
         self.cleaniness -=5  # 5 point down (Pet can get dirty from eating)
-        self.clamp_stats()  # makes sure stats stay between 0-100
+        self.clamp_stats()   # makes sure stats stay between 0-100
 
     def play(self):
-        pass
+        self.hunger -= 20    # 20 points down for playing
+        self.energy -= 30    # 30 points down for playing
+        self.happiness += 40 # 40 points up for playing
+        self.cleaniness -=35 # 35 point down for playing
+        self.clamp_stats()   # makes sure stats stay between 0-100
 
     def bathe(self):
         pass
