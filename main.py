@@ -12,7 +12,7 @@ class Pet:
         self.energy -= 10    # 10 points down for eating
         self.happiness += 10 # 10 points up for eating
         self.cleaniness -=5  # 5 point down (Pet can get dirty from eating)
-        self._clamp_stats()  # makes sure stats stay between 0-100
+        self.clamp_stats()  # makes sure stats stay between 0-100
 
     def play(self):
         pass
@@ -28,9 +28,13 @@ class Pet:
         self.happiness = max(0, min(100, self.happiness))
         self.cleaniness = max(0, min(100, self.cleaniness))
         
-if __name__ = "__main__":
+if __name__ == "__main__":
     pet = Pet("Pancho") # Pass a name into the parameter 
 
+    print(pet.hunger, pet.energy, pet.happiness, pet.cleaniness)
+
+    pet.feed()
+    print(pet.hunger, pet.energy, pet.happiness, pet.cleaniness)
 
 
 
