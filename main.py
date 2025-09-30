@@ -19,15 +19,18 @@ class Pet:
 
     def bathe(self):
         pass
-    
+
     # Keep values in a range of 0-100
     def clamp_stats(self):
         # we want it in a safe range so use max and min
-        self.hunger = max(100, min(0, self.hunger))
-        self.energy = max(100, min(0, self.energy))
-        self.happiness = max(100, min(0, self.happiness))
-        self.cleaniness = max(100, min(0, self.cleaniness))
+        self.hunger = max(0, min(100, self.hunger))
+        self.energy = max(0, min(100, self.energy))
+        self.happiness = max(0, min(100, self.happiness))
+        self.cleaniness = max(0, min(100, self.cleaniness))
         
+if __name__ = "__main__":
+    pet = Pet("Pancho") # Pass a name into the parameter 
+
 
 
 
