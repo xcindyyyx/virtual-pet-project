@@ -55,31 +55,28 @@ if __name__ == "__main__":
                 pet.feed()
                 print(f"-- {pet.name}'s stats --")
                 print(pet.status())
-                # if pet.hunger == 0:
-                #     print(f"{pet.name} has passed away from hunger :(\n")
-                #     break
+                if pet.hunger == 0:
+                    print(f"{pet.name} has passed away from hunger :(\n")
+                    break
             case "play":
                 pet.play()
                 print(f"-- {pet.name}'s stats --")
                 print(pet.status())
-                continue
+                if pet.hunger == 0:
+                    print(f"{pet.name} has passed away from hunger :(\n")
+                    break
             case "bathe":
                 pet.bathe()
                 print(f"-- {pet.name}'s stats --")
                 print(pet.status())
-                continue
+                if pet.hunger == 0:
+                    print(f"{pet.name} has passed away from hunger :(\n")
+                    break
             case "quit":
                 print("Goodbye!\n")
                 break
             case _:
-                print("Invalid action!")
-
-    
+                print("Invalid action!\n")
 
     print(f"-- {pet.name}'s Final Stats --")
     print(pet.status())
-
-
-
-
-    
