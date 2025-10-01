@@ -40,7 +40,7 @@ class Pet:
         self.hunger = max(0, min(100, self.hunger))
         self.energy = max(0, min(100, self.energy))
         self.happiness = max(0, min(100, self.happiness))
-        self.cleaniness = max(0, min(100, self.cleanliness))
+        self.cleanliness = max(0, min(100, self.cleanliness))
         
 if __name__ == "__main__":
     pet = Pet("Pancho") # Pass a name into the parameter 
@@ -71,6 +71,9 @@ if __name__ == "__main__":
                 break
             case _:
                 print("Invalid action!")
+
+    if pet.hunger == 0:
+        print(f"{pet.name} has passed away from hunger :(\n")
 
     print(f"-- {pet.name}'s Final Stats --")
     print(pet.status())
