@@ -30,7 +30,7 @@ class Pet:
 
     def status(self):
         return (f"{self.name} stats: "
-                f"Hunger: {self.name} "
+                f"Hunger: {self.hunger} "
                 f"Energy: {self.energy} "
                 f"Happiness: {self.happiness} "
                 f"Cleanliness: {self.cleanliness} ")
@@ -61,6 +61,8 @@ if __name__ == "__main__":
                 break
             case _:
                 print("Invalid action!")
+
+    print(pet.status())
 
 
 
