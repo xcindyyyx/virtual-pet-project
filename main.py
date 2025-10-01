@@ -39,11 +39,21 @@ class Pet:
 if __name__ == "__main__":
     pet = Pet("Pancho") # Pass a name into the parameter 
 
-    print(pet.hunger, pet.energy, pet.happiness, pet.cleaniness)
+    while True:
+        action = input("Choose: feed, play, bathe, or quit: ").lower()
 
-    pet.feed()
-    print(pet.hunger, pet.energy, pet.happiness, pet.cleaniness)
-
+        match action:
+            case "feed":
+                pet.feed()
+            case "play":
+                pet.play()
+            case "bathe":
+                pet.bathe()
+            case "quit":
+                print("Goodbye!")
+                break
+            case _:
+                print("Invalid action!")
 
 
 
