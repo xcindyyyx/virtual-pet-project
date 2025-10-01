@@ -33,7 +33,7 @@ class Pet:
                 f"Energy: {self.energy} \n"
                 f"Happiness: {self.happiness} \n"
                 f"Cleanliness: {self.cleanliness} \n")
-    
+      
     # Keep values in a range of 0-100
     def clamp_stats(self):
         # we want it in a safe range so use max and min
