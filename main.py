@@ -55,7 +55,9 @@ if __name__ == "__main__":
                 pet.feed()
                 print(f"-- {pet.name}'s stats --")
                 print(pet.status())
-                continue
+                # if pet.hunger == 0:
+                #     print(f"{pet.name} has passed away from hunger :(\n")
+                #     break
             case "play":
                 pet.play()
                 print(f"-- {pet.name}'s stats --")
@@ -72,11 +74,11 @@ if __name__ == "__main__":
             case _:
                 print("Invalid action!")
 
-    if pet.hunger == 0:
-        print(f"{pet.name} has passed away from hunger :(\n")
+    
 
     print(f"-- {pet.name}'s Final Stats --")
     print(pet.status())
+
 
 
 
