@@ -1,3 +1,10 @@
+import tkinter as tk
+from tkinter import messagebox
+
+
+root = tk.Tk()
+root.withdraw() # hide main Tk window
+
 class Pet:
     def __init__(self, name):   # only pass pets name because we want every pet to have a default value
         self.name = name
@@ -56,14 +63,15 @@ if __name__ == "__main__":
                 print(f"-- {pet.name}'s stats --")
                 print(pet.status())
                 if pet.hunger == 0:
-                    print(f"{pet.name} has passed away from hunger :(\n")
+                    messagebox.showinfo("Important Msg", f"{pet.name} has passed away from hunger :(")
+                    # print(f"{pet.name} has passed away from hunger :(\n")
                     break
             case "play":
                 pet.play()
                 print(f"-- {pet.name}'s stats --")
                 print(pet.status())
                 if pet.hunger == 0:
-                    print(f"{pet.name} has passed away from hunger :(\n")
+                    messagebox.showinfo("Important Msg", f"{pet.name} has passed away from hunger :(")
                     break
             case "bathe":
                 pet.bathe()
