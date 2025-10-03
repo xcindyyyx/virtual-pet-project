@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
 
-
 root = tk.Tk()
 root.withdraw() # hide main Tk window
 
@@ -64,7 +63,6 @@ if __name__ == "__main__":
                 print(pet.status())
                 if pet.hunger == 0:
                     messagebox.showinfo("Important Msg", f"{pet.name} has passed away from hunger :(")
-                    # print(f"{pet.name} has passed away from hunger :(\n")
                     break
             case "play":
                 pet.play()
